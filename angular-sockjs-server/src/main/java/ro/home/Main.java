@@ -70,7 +70,7 @@ public class Main {
     /*
     private static IdentityManager initialiseIdentityManaqer(){
         Map<String, char[]> users = new HashMap<>();
-        users.put("gcrsSecureUser", "rr599904".toCharArray());
+        users.put("secureUser", "******".toCharArray());
         return new MapIdentityManager(users);
     }
     private static SecurityConstraint initializeSecurityConstraint(String urlPattern, String userAllowed) {
