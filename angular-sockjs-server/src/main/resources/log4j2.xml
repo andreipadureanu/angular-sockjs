@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration>
+
+    <Appenders>
+        <Console name="STDOUT" target="SYSTEM_OUT">
+            <PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} %L - %msg %n"/>
+        </Console>
+    </Appenders>
+
+    <loggers>
+        <root level="info">
+            <appender-ref ref="STDOUT"/>
+        </root>
+        <logger name="ro.home"                          level="info"  />
+        <logger name="org.springframework"              level="info"  />
+        <logger name="org.springframework.web.socket"   level="info"  />
+        <logger name="io.undertow"                      level="info"  />
+        <logger name="org.xnio"                         level="info"  />
+    </loggers>
+
+</Configuration>

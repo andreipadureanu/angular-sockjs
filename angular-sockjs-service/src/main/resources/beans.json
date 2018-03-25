@@ -1,0 +1,209 @@
+[
+  {
+    "com.fasterxml.jackson.databind.ObjectMapper": [
+      "objectMapper"
+    ],
+    "org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor": [
+      "org.springframework.context.annotation.internalAutowiredAnnotationProcessor"
+    ],
+    "org.springframework.beans.factory.annotation.RequiredAnnotationBeanPostProcessor": [
+      "org.springframework.context.annotation.internalRequiredAnnotationProcessor"
+    ],
+    "org.springframework.context.annotation.CommonAnnotationBeanPostProcessor": [
+      "org.springframework.context.annotation.internalCommonAnnotationProcessor"
+    ],
+    "org.springframework.context.annotation.ConfigurationClassPostProcessor": [
+      "org.springframework.context.annotation.internalConfigurationAnnotationProcessor"
+    ],
+    "org.springframework.context.event.DefaultEventListenerFactory": [
+      "org.springframework.context.event.internalEventListenerFactory"
+    ],
+    "org.springframework.context.event.EventListenerMethodProcessor": [
+      "org.springframework.context.event.internalEventListenerProcessor"
+    ],
+    "org.springframework.format.support.DefaultFormattingConversionService": [
+      "mvcConversionService"
+    ],
+    "org.springframework.oxm.jaxb.Jaxb2Marshaller": [
+      "jaxb2Marshaller"
+    ],
+    "org.springframework.util.AntPathMatcher": [
+      "mvcPathMatcher"
+    ],
+    "org.springframework.web.accept.ContentNegotiationManager": [
+      "mvcContentNegotiationManager"
+    ],
+    "org.springframework.web.method.support.CompositeUriComponentsContributor": [
+      "mvcUriComponentsContributor"
+    ],
+    "org.springframework.web.servlet.config.annotation.DelegatingWebMvcConfiguration$$EnhancerBySpringCGLIB$$1f7d4617": [
+      "org.springframework.web.servlet.config.annotation.DelegatingWebMvcConfiguration"
+    ],
+    "org.springframework.web.servlet.config.annotation.WebMvcConfigurationSupport$EmptyHandlerMapping": [
+      "viewControllerHandlerMapping",
+      "resourceHandlerMapping",
+      "defaultServletHandlerMapping"
+    ],
+    "org.springframework.web.servlet.config.annotation.WebMvcConfigurationSupport$NoOpValidator": [
+      "mvcValidator"
+    ],
+    "org.springframework.web.servlet.handler.BeanNameUrlHandlerMapping": [
+      "beanNameHandlerMapping"
+    ],
+    "org.springframework.web.servlet.handler.HandlerExceptionResolverComposite": [
+      "handlerExceptionResolver"
+    ],
+    "org.springframework.web.servlet.handler.HandlerMappingIntrospector": [
+      "mvcHandlerMappingIntrospector"
+    ],
+    "org.springframework.web.servlet.mvc.HttpRequestHandlerAdapter": [
+      "httpRequestHandlerAdapter"
+    ],
+    "org.springframework.web.servlet.mvc.SimpleControllerHandlerAdapter": [
+      "simpleControllerHandlerAdapter"
+    ],
+    "org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter": [
+      "requestMappingHandlerAdapter"
+    ],
+    "org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping": [
+      "requestMappingHandlerMapping"
+    ],
+    "org.springframework.web.servlet.resource.ResourceUrlProvider": [
+      "mvcResourceUrlProvider"
+    ],
+    "org.springframework.web.servlet.view.ViewResolverComposite": [
+      "mvcViewResolver"
+    ],
+    "org.springframework.web.util.UrlPathHelper": [
+      "mvcUrlPathHelper"
+    ],
+    "ro.home.config.RestConfig$$EnhancerBySpringCGLIB$$79c696ca": [
+      "restConfig"
+    ],
+    "ro.home.config.RootConfig$$EnhancerBySpringCGLIB$$90bef518": [
+      "ro.home.config.RootConfig"
+    ],
+    "ro.home.resource.CompletableFutureResource": [
+      "completableFutureResource"
+    ],
+    "ro.home.resource.ReactorResource": [
+      "reactorResource"
+    ],
+    "ro.home.resource.RxJavaResource": [
+      "rxJavaResource"
+    ],
+    "ro.home.resource.SpringBeansResource": [
+      "springBeansResource"
+    ],
+    "ro.home.service.CompletableFutureService": [
+      "completableFutureService"
+    ],
+    "ro.home.service.ReactorService": [
+      "reactorService"
+    ],
+    "ro.home.service.RxJavaService": [
+      "rxJavaService"
+    ]
+  },
+  {
+    "com.fasterxml.jackson.databind.ObjectMapper": [
+      "objectMapper"
+    ],
+    "org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor": [
+      "org.springframework.context.annotation.internalAutowiredAnnotationProcessor"
+    ],
+    "org.springframework.beans.factory.annotation.RequiredAnnotationBeanPostProcessor": [
+      "org.springframework.context.annotation.internalRequiredAnnotationProcessor"
+    ],
+    "org.springframework.beans.factory.config.CustomScopeConfigurer": [
+      "webSocketScopeConfigurer"
+    ],
+    "org.springframework.context.annotation.CommonAnnotationBeanPostProcessor": [
+      "org.springframework.context.annotation.internalCommonAnnotationProcessor"
+    ],
+    "org.springframework.context.annotation.ConfigurationClassPostProcessor": [
+      "org.springframework.context.annotation.internalConfigurationAnnotationProcessor"
+    ],
+    "org.springframework.context.event.DefaultEventListenerFactory": [
+      "org.springframework.context.event.internalEventListenerFactory"
+    ],
+    "org.springframework.context.event.EventListenerMethodProcessor": [
+      "org.springframework.context.event.internalEventListenerProcessor"
+    ],
+    "org.springframework.messaging.MessageHandler": [
+      "simpAnnotationMethodMessageHandler",
+      "simpleBrokerMessageHandler",
+      "stompBrokerRelayMessageHandler",
+      "userDestinationMessageHandler",
+      "userRegistryMessageHandler"
+    ],
+    "org.springframework.messaging.converter.CompositeMessageConverter": [
+      "brokerMessageConverter"
+    ],
+    "org.springframework.messaging.simp.SimpMessagingTemplate": [
+      "brokerMessagingTemplate"
+    ],
+    "org.springframework.messaging.simp.annotation.support.SimpAnnotationMethodMessageHandler": [
+      "simpAnnotationMethodMessageHandler"
+    ],
+    "org.springframework.messaging.simp.broker.AbstractBrokerMessageHandler": [
+      "simpleBrokerMessageHandler",
+      "stompBrokerRelayMessageHandler"
+    ],
+    "org.springframework.messaging.simp.user.SimpUserRegistry": [
+      "userRegistry"
+    ],
+    "org.springframework.messaging.simp.user.UserDestinationMessageHandler": [
+      "userDestinationMessageHandler"
+    ],
+    "org.springframework.messaging.simp.user.UserDestinationResolver": [
+      "userDestinationResolver"
+    ],
+    "org.springframework.messaging.support.AbstractSubscribableChannel": [
+      "clientInboundChannel",
+      "clientOutboundChannel",
+      "brokerChannel"
+    ],
+    "org.springframework.oxm.jaxb.Jaxb2Marshaller": [
+      "jaxb2Marshaller"
+    ],
+    "org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor": [
+      "clientInboundChannelExecutor",
+      "clientOutboundChannelExecutor",
+      "brokerChannelExecutor"
+    ],
+    "org.springframework.scheduling.concurrent.ThreadPoolTaskScheduler": [
+      "messageBrokerTaskScheduler"
+    ],
+    "org.springframework.web.servlet.HandlerMapping": [
+      "stompWebSocketHandlerMapping"
+    ],
+    "org.springframework.web.socket.WebSocketHandler": [
+      "subProtocolWebSocketHandler"
+    ],
+    "org.springframework.web.socket.config.WebSocketMessageBrokerStats": [
+      "webSocketMessageBrokerStats"
+    ],
+    "org.springframework.web.socket.config.annotation.DelegatingWebSocketMessageBrokerConfiguration$$EnhancerBySpringCGLIB$$5401691e": [
+      "org.springframework.web.socket.config.annotation.DelegatingWebSocketMessageBrokerConfiguration"
+    ],
+    "ro.home.config.RootConfig$$EnhancerBySpringCGLIB$$99193c82": [
+      "ro.home.config.RootConfig"
+    ],
+    "ro.home.config.WebSocketConfig$$EnhancerBySpringCGLIB$$445e090b": [
+      "webSocketConfig"
+    ],
+    "ro.home.service.CompletableFutureService": [
+      "completableFutureService"
+    ],
+    "ro.home.service.ReactorService": [
+      "reactorService"
+    ],
+    "ro.home.service.RxJavaService": [
+      "rxJavaService"
+    ],
+    "ro.home.ws.WsHandler": [
+      "wsHandler"
+    ]
+  }
+]
