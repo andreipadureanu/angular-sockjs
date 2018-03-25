@@ -13,7 +13,6 @@
         </root>
         <logger name="ro.home"                          level="info"  />
         <logger name="org.springframework"              level="info"  />
-        <logger name="org.springframework.web.socket"   level="info"  />
         <logger name="io.undertow"                      level="info"  />
         <logger name="org.xnio"                         level="info"  />
     </loggers>

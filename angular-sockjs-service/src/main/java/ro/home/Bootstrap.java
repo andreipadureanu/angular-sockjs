@@ -24,7 +24,6 @@ public class Bootstrap implements WebApplicationInitializer {
         restDispatcher.setLoadOnStartup(1);
         restDispatcher.setAsyncSupported(true);
 
-
         AnnotationConfigWebApplicationContext webSocketContext = new AnnotationConfigWebApplicationContext();
         webSocketContext.register(WebSocketConfig.class);
         DispatcherServlet webSocketServlet = new DispatcherServlet(webSocketContext);

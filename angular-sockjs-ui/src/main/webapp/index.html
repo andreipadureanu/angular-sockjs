@@ -3,7 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <title>SockJS Chat WebSocket</title>
-    <link rel="stylesheet" href="webjars/bootstrap/3.3.7-1/css/bootstrap.css"/>
+    <!--
+    <link rel="stylesheet" href="webjars/bootstrap/3.3.7-1/css/bootstrap.min.css"/>
+    -->
+    <link rel="stylesheet" href="webjars/bootstrap/4.0.0-2/css/bootstrap.min.css"/>
     <link rel="stylesheet" href="css/chat.css"/>
     <!--
     <script src="webjars/jquery/3.3.1/dist/jquery.slim.min.js"></script>
@@ -22,41 +25,38 @@
 <body ng-app="angular.bootstrap.sockjs" ng-cloak ng-controller="chatController">
 
 <div id="header" align="center">
-    <h3 data-ng-bind="model.header" data-ng-init="model.header='SockJS Websocket Chat'"></h3>
-    <p data-ng-show="!model.connected">Connecting...</p>
-    <p>{{model.content}}</p>
+    <h3 data-ng-bind="vm.header" data-ng-init="vm.header='SockJS Websocket Chat'"></h3>
+    <p data-ng-show="!vm.connected">Connecting...</p>
+    <p>{{vm.content}}</p>
 </div>
 
 <div id="content" class="container">
     <div class="row">
-        <div class="panel panel-default">
-            <div class="panel-heading">
-                <h3 class="panel-title">Chat room</h3>
-            </div>
-            <div class="panel-body">
-                <div class="messages">
-                    <p data-ng-repeat="message in model.messages">
+        <div class="col-12">
+            <div class="card">
+                <div class="card-header">
+                    <h5 class="panel-title">Chat room</h5>
+                </div>
+                <div id="messageConsoleBody" class="card-body">
+                    <p data-ng-repeat="message in vm.messages">
                         <span class="time">{{message.date | date:'shortDate'}} {{message.date | date:'shortTime'}}</span>
                         <span class="author"> {{message.author}} </span> :
                         <span class="text">{{message.message}}</span>
                     </p>
                 </div>
             </div>
-        </div>
-    </div>
-    <span data-ng-show="!model.name">Enter your name:</span>
-    <div data-ng-show="model.logged">
-        <span><b>{{model.name}}</b> says:</span>
-    </div>
-    <form role="form" class="form-horizontal">
-        <div class="form-group">
-            <div class="col-lg-9">
-                <input type="text" class="form-control" ng-model="model.input" ng-keydown="inputKeyDown($event)"
-                       data-ng-disabled="!model.connected" x-webkit-speech
+            <br/>
+            <span data-ng-show="!vm.name">Enter your name:</span>
+            <div data-ng-show="vm.logged">
+                <span><b>{{vm.name}}</b> says:</span>
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control" ng-model="vm.input" ng-keydown="inputKeyDown($event)"
+                       data-ng-disabled="!vm.connected" x-webkit-speech
                 />
             </div>
         </div>
-    </form>
+    </div>
 </div>
 </body>
 </html>

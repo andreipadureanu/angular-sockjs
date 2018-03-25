@@ -5,3 +5,10 @@
 .author {
     font-weight: bold;
 }
+
+#messageConsoleBody {
+    overflow-y: scroll;
+    height: 60vh;
+    min-height: 250px;
+    min-width: 600px;
+}

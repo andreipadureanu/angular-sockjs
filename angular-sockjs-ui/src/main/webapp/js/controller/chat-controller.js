@@ -1,27 +1,36 @@
 angular.module('angular.bootstrap.sockjs').controller("chatController", function ($scope) {
 
-    $scope.model = {
+    $scope.vm = {
         transport: 'websocket',
         connected: false,
         messages: [],
         input: ''
     };
 
+    $scope.messageConsole = document.getElementById("messageConsoleBody");
+
+    $scope.$watch('messageConsole.scrollHeight', function () {
+            var console = $scope.messageConsole;
+            console.scrollTop = console.scrollHeight - console.clientHeight;
+        },
+        true
+    );
+
     var socket = new SockJS(document.location.toString() + 'ws', {}, {"debug": false, "devel": false});
     var stompClient = Stomp.over(socket);
 
     stompClient.connect({}, function (frame) {
         $scope.$apply(function () {
-            $scope.model.connected = true;
-            $scope.model.content = 'SockJS connected using ' + $scope.model.transport;
+            $scope.vm.connected = true;
+            $scope.vm.content = 'SockJS connected using ' + $scope.vm.transport;
         });
         stompClient.subscribe('/topic/chatMessages', function (messageContent) {
             var message = JSON.parse(messageContent.body);
             $scope.$apply(function () {
-                if (!$scope.model.logged && $scope.model.name) {
-                    $scope.model.logged = true;
+                if (!$scope.vm.logged && $scope.vm.name) {
+                    $scope.vm.logged = true;
                 } else {
-                    $scope.model.messages.push(message);
+                    $scope.vm.messages.push(message);
                 }
             });
         });
@@ -36,16 +45,17 @@ angular.module('angular.bootstrap.sockjs').controller("chatController", function
     });
 
     $scope.inputKeyDown = function ($event) {
-        var msg = $scope.model.input;
-        if (msg && msg.length > 0 && $event.keyCode === 13) {
+        var message = $scope.vm.input;
+        if (message && message.length > 0 && $event.keyCode === 13) {
             // First message is always the author's name
-            if (!$scope.model.name) {
-                $scope.model.name = msg;
+            if (!$scope.vm.name) {
+                $scope.vm.name = message;
             }
-            stompClient.send("/chat", {}, JSON.stringify({author: $scope.model.name, message: msg}));
-            $scope.model.input = '';
+            stompClient.send("/chat", {}, JSON.stringify({author: $scope.vm.name, message: message}));
+            $scope.vm.input = '';
         }
-    }
+    };
+
 
     /*
     request.onReopen = function (response) {
