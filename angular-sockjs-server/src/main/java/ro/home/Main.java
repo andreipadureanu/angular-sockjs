@@ -106,8 +106,7 @@ public class Main {
                 .addWelcomePage("index.html")
                 .addServletContainerInitalizer(servletContainerInitializerInfo);
 
-        WebSocketDeploymentInfo webSocketDeployment = new WebSocketDeploymentInfo();
-        servletBuilder.addServletContextAttribute(WebSocketDeploymentInfo.ATTRIBUTE_NAME, webSocketDeployment);
+        servletBuilder.addServletContextAttribute(WebSocketDeploymentInfo.ATTRIBUTE_NAME, new WebSocketDeploymentInfo());
 
         DeploymentManager deploymentManager = Servlets.defaultContainer().addDeployment(servletBuilder);
         deploymentManager.deploy();

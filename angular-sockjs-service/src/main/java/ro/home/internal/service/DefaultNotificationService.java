@@ -21,7 +21,7 @@ import static org.springframework.web.context.support.WebApplicationContextUtils
 
 @Service
 @Lazy
-class DefaultNotificationService implements NotificationService, ServletContextAware {
+final class DefaultNotificationService implements NotificationService, ServletContextAware {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(DefaultNotificationService.class);
     private ServletContext servletContext;

@@ -71,5 +71,5 @@ angular.module('angular.bootstrap.sockjs').controller("chatController", function
         $scope.model.content = 'Connection lost. Trying to reconnect ' + request.reconnectInterval;
         $scope.model.connected = false;
     };
-    */
+*/
 });
